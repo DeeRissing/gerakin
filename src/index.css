@@ -1,1 +1,54 @@
 @import "tailwindcss";
+
+/* ==================================
+   GERAKIN DESIGN SYSTEM
+   Version 0.2.0
+================================== */
+
+@theme {
+  /* Primary Colors */
+  --color-gerakin-sky: #38BDF8;
+  --color-gerakin-blue: #0284C7;
+  --color-gerakin-navy: #0F172A;
+
+  /* Background Colors */
+  --color-gerakin-white: #FFFFFF;
+  --color-gerakin-light: #F0F9FF;
+
+  /* Accent */
+  --color-gerakin-yellow: #FACC15;
+}
+
+/* Global Styles */
+
+:root {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  color: #0F172A;
+  background: #F7FBFF;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 3px solid #FACC15;
+  outline-offset: 3px;
+}

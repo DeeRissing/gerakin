@@ -1,8 +1,4 @@
 import { Routes, Route, Link } from "react-router";
-import ActionLink from "./components/ActionLink";
-import FeatureCard from "./components/FeatureCard";
-import SectionHeading from "./components/SectionHeading";
-
 import {
   ArrowRight,
   BookOpen,
@@ -14,185 +10,167 @@ import {
 } from "lucide-react";
 
 import Navbar from "./components/Navbar";
+import ActionLink from "./components/ActionLink";
+import FeatureCard from "./components/FeatureCard";
+import SectionHeading from "./components/SectionHeading";
+import heroImage from "./assets/volleyball.svg";
 
 function Beranda() {
   return (
     <main className="overflow-hidden">
+      <section className="relative min-h-[calc(100vh-80px)] overflow-hidden bg-[#eef8fd]">
+        {/* BACKGROUND DASAR */}
+        <div className="absolute inset-0">
+          <div className="absolute left-0 top-0 h-full w-full bg-linear-to-r from-[#f3fbff] via-[#eef8fd] to-[#dff3ff]" />
+          <div className="absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-sky-300/20 blur-3xl" />
+          <div className="absolute left-1/4 top-10 h-64 w-64 rounded-full bg-blue-200/20 blur-3xl" />
+        </div>
 
-      <section className="relative bg-linear-to-br from-sky-50 via-white to-sky-100">
+        {/* AREA GAMBAR KANAN */}
+        <div className="absolute inset-y-0 right-0 hidden w-[52%] overflow-hidden lg:block">
+          <img
+            src={heroImage}
+            alt="Siswa sedang bermain bola voli"
+            className="h-full w-full object-cover"
+          />
 
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-10 lg:py-28">
+          {/* overlay halus di atas gambar */}
+          <div className="absolute inset-0 bg-linear-to-l from-sky-900/10 via-transparent to-transparent" />
 
-          {/* HERO TEXT */}
+          {/* dekorasi */}
+          <div className="absolute right-10 top-14 h-36 w-36 rounded-full bg-yellow-300/25 blur-3xl" />
+          <div className="absolute bottom-16 left-8 h-28 w-28 rounded-full bg-sky-300/25 blur-2xl" />
 
-          <div>
+          {/* badge */}
+          <div className="absolute bottom-10 right-10 rounded-3xl bg-white/95 px-5 py-4 shadow-xl backdrop-blur">
+            <p className="text-2xl font-black text-gerakin-navy">6 Teknik Dasar</p>
+            <p className="text-sm text-slate-500">Bola Voli</p>
+          </div>
+        </div>
 
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-sky-100 px-4 py-2 text-sm font-bold text-sky-700">
+        {/* PEMBATAS LEKUKAN */}
+        <div className="absolute inset-y-0 right-[48%] z-10 hidden h-full w-55 translate-x-1/2 lg:block">
+          <svg
+            viewBox="0 0 220 900"
+            preserveAspectRatio="none"
+            className="h-full w-full"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M120,0 
+                 C170,60 170,120 120,180
+                 C70,240 70,300 125,360
+                 C180,420 180,480 120,540
+                 C60,600 60,660 125,720
+                 C185,780 185,840 120,900
+                 L0,900 L0,0 Z"
+              fill="#eef8fd"
+            />
+          </svg>
+        </div>
+
+        {/* KONTEN KIRI */}
+        <div className="relative z-20 mx-auto flex min-h-[calc(100vh-80px)] max-w-7xl items-center px-6 py-14 lg:px-10">
+          <div className="max-w-2xl lg:max-w-[44%]">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-sky-700 shadow-sm backdrop-blur">
               <BookOpen size={17} />
               MEDIA PEMBELAJARAN PJOK KELAS IX
             </div>
 
-            <h1 className="text-4xl font-black leading-tight tracking-tight text-gerakin-navy sm:text-5xl lg:text-6xl">
+            <h1 className="text-5xl font-black leading-[0.95] tracking-tight text-gerakin-navy sm:text-6xl xl:text-7xl">
               Belajar Bola Voli
               <br />
-
-              <span className="text-gerakin-blue">
-                Lebih Seru
-              </span>
-
-              <span className="text-gerakin-yellow">!</span>
+              <span className="text-gerakin-blue">Lebih Seru</span>
+              <span className="text-orange-400">!</span>
             </h1>
 
-            <p className="mt-6 max-w-lg text-base leading-relaxed text-slate-600 sm:text-lg">
-              GERAKIN membantu kamu memahami teknik dasar
-              bola voli melalui materi interaktif,
-              video demonstrasi, latihan, dan kuis.
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-700 sm:text-xl">
+              GERAKIN membantumu memahami teknik dasar bola voli melalui
+              materi interaktif, video demonstrasi, latihan praktik, kuis,
+              dan refleksi pembelajaran.
             </p>
 
-<div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap gap-4">
+              <ActionLink to="/materi">
+                Mulai Belajar
+                <ArrowRight size={20} />
+              </ActionLink>
 
-  <ActionLink to="/materi">
-    Mulai Belajar
-    <ArrowRight size={20} />
-  </ActionLink>
+              <ActionLink
+                to="/materi"
+                variant="secondary"
+                className="bg-white/80 backdrop-blur"
+              >
+                <PlayCircle size={20} />
+                Jelajahi Materi
+              </ActionLink>
+            </div>
 
-  <ActionLink to="/materi" variant="secondary">
-    <PlayCircle size={20} />
-    Jelajahi Materi
-  </ActionLink>
-
-</div>
-
-            <div className="mt-10 flex items-center gap-3 text-sm font-medium text-slate-500">
-              <CheckCircle2
-                size={21}
-                className="text-green-500"
-              />
-
+            <div className="mt-8 flex items-center gap-3 text-base font-medium text-slate-700">
+              <CheckCircle2 size={22} className="text-green-500" />
               Belajar kapan saja dan di mana saja
             </div>
-
           </div>
-
-          {/* AREA VISUAL SEMENTARA */}
-
-          <div className="relative">
-
-            <div className="relative flex min-h-80 items-center justify-center overflow-hidden rounded-[36px] bg-linear-to-br from-sky-300 via-sky-400 to-blue-600 p-8 shadow-xl shadow-sky-100 sm:min-h-96">
-
-              {/* Decorative Circles */}
-
-              <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full border-35x border-white/20" />
-
-              <div className="absolute -bottom-20 -left-16 h-64 w-64 rounded-full bg-white/10" />
-
-              {/* Volleyball Illustration */}
-
-              <svg
-                viewBox="0 0 240 240"
-                className="relative z-10 h-48 w-48 drop-shadow-2xl sm:h-60 sm:w-60"
-                role="img"
-                aria-label="Ilustrasi bola voli"
-              >
-                <circle
-                  cx="120"
-                  cy="120"
-                  r="92"
-                  fill="#FFFFFF"
-                  stroke="#E0F2FE"
-                  strokeWidth="5"
-                />
-
-                <g
-                  fill="none"
-                  stroke="#0284C7"
-                  strokeWidth="6"
-                  strokeLinecap="round"
-                >
-                  <path d="M55 54 Q125 77 132 30" />
-                  <path d="M132 30 Q142 95 206 91" />
-                  <path d="M206 91 Q154 128 193 177" />
-                  <path d="M193 177 Q122 159 100 208" />
-                  <path d="M100 208 Q105 143 34 151" />
-                  <path d="M34 151 Q96 117 55 54" />
-                  <path d="M55 54 Q117 115 34 151" />
-                  <path d="M132 30 Q102 116 193 177" />
-                </g>
-              </svg>
-
-              <div className="absolute bottom-5 right-5 z-20 rounded-2xl bg-white px-4 py-3 shadow-lg">
-                <p className="text-sm font-black text-gerakin-navy">
-                  6 Teknik Dasar
-                </p>
-
-                <p className="text-xs text-slate-500">
-                  Bola Voli
-                </p>
-              </div>
-
-            </div>
-
-          </div>
-
         </div>
 
+        {/* VERSI MOBILE/TABLET */}
+        <div className="relative z-10 block px-6 pb-8 lg:hidden">
+          <div className="overflow-hidden rounded-[28px] border-4 border-white/80 shadow-xl">
+            <img
+              src={heroImage}
+              alt="Siswa sedang bermain bola voli"
+              className="h-70 w-full object-cover sm:h-90"
+            />
+          </div>
+
+          <div className="mt-4 inline-flex rounded-2xl bg-white px-4 py-3 shadow-md">
+            <div>
+              <p className="text-lg font-black text-gerakin-navy">6 Teknik Dasar</p>
+              <p className="text-sm text-slate-500">Bola Voli</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* STATUS PENGEMBANGAN */}
+      {/* SECTION KEUNGGULAN */}
+      <section className="relative bg-white px-6 py-20 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            eyebrow="BELAJAR LEBIH MENYENANGKAN"
+            title="Kenapa Belajar di GERAKIN?"
+            description="Belajar teknik dasar bola voli menjadi lebih mudah, interaktif, dan menyenangkan melalui pengalaman belajar yang dirancang khusus untuk siswa SMP."
+          />
 
-      {/* =====================================
-    SECTION KEUNGGULAN GERAKIN
-===================================== */}
+          <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <FeatureCard
+              icon={BookOpen}
+              title="Mudah Dipahami"
+              description="Materi disajikan dengan bahasa sederhana, ilustrasi menarik, dan penjelasan yang mudah dimengerti."
+            />
 
-<section className="relative bg-white px-6 py-20 lg:px-10">
+            <FeatureCard
+              icon={Lightbulb}
+              title="Interaktif"
+              description="Belajar menggunakan video demonstrasi, latihan praktik, kuis, dan refleksi pembelajaran."
+            />
 
-  <div className="mx-auto max-w-7xl">
+            <FeatureCard
+              icon={Target}
+              title="Fokus pada Praktik"
+              description="Membantu siswa memahami dan mempraktikkan enam teknik dasar permainan bola voli."
+            />
 
-    {/* SECTION HEADING */}
-
-    <SectionHeading
-      eyebrow="BELAJAR LEBIH MENYENANGKAN"
-      title="Kenapa Belajar di GERAKIN?"
-      description="Belajar teknik dasar bola voli menjadi lebih mudah, interaktif, dan menyenangkan melalui pengalaman belajar yang dirancang khusus untuk siswa SMP."
-    />
-
-    {/* FEATURE GRID */}
-
-    <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-
-      <FeatureCard
-        icon={BookOpen}
-        title="Mudah Dipahami"
-        description="Materi disajikan dengan bahasa sederhana, ilustrasi menarik, dan penjelasan yang mudah dimengerti."
-      />
-
-      <FeatureCard
-        icon={Lightbulb}
-        title="Interaktif"
-        description="Belajar menggunakan video demonstrasi, latihan praktik, kuis, dan refleksi pembelajaran."
-      />
-
-      <FeatureCard
-        icon={Target}
-        title="Fokus pada Praktik"
-        description="Membantu siswa memahami dan mempraktikkan enam teknik dasar permainan bola voli."
-      />
-
-      <FeatureCard
-        icon={Smartphone}
-        title="Belajar Kapan Saja"
-        description="Materi pembelajaran dapat diakses dengan nyaman melalui smartphone maupun laptop."
-      />
-
-    </div>
-
-  </div>
-
-</section>
-
+            <FeatureCard
+              icon={Smartphone}
+              title="Belajar Kapan Saja"
+              description="Materi pembelajaran dapat diakses dengan nyaman melalui smartphone maupun laptop."
+            />
+          </div>
+        </div>
+      </section>
     </main>
   );
-}
+} 
 
 function HalamanSementara({ judul, deskripsi }) {
   return (

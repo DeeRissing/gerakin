@@ -1,0 +1,35 @@
+GERAKIN — Fase 3 / v0.3.0
+======================================
+
+A. LANGKAH PEMASANGAN
+1. Pastikan folder proyek React + Vite kamu: D:\Gerakin
+2. Buat commit backup terlebih dahulu (opsional tetapi direkomendasikan):
+   git add .
+   git commit -m "checkpoint: sebelum fase 3"
+3. Ekstrak isi ZIP ini ke folder D:\Gerakin (bukan D:\Gerakin\gerakin-fase3).
+4. Izinkan replace/overwrite hanya file yang ada di paket ini.
+5. JANGAN hapus src/components/ActionLink.jsx, FeatureCard.jsx, dan SectionHeading.jsx
+   karena halaman Fase 3 menggunakannya.
+6. Tidak perlu mengubah src/index.css atau src/main.jsx dari Fase 2.
+7. Jalankan:
+   npm run lint
+   npm run build
+   npm run dev
+8. Buka http://localhost:5173/
+9. Uji lebar layar 320px, 390px, 768px, dan desktop.
+
+B. ISI PAKET
+- src/App.jsx (Beranda final + halaman lain masih placeholder)
+- src/components/Navbar.jsx (navbar dan logo baru)
+- src/components/GerakinLogo.jsx (logo SVG sebagai React component)
+- public/images/gerakin-hero-voli.webp (visual hero hasil gambar AI yang dipotong dari mockup)
+- public/favicon.svg (ikon tab browser)
+- index.html (judul GERAKIN + favicon)
+
+C. CATATAN
+- Foto hero ini adalah ilustrasi visual buatan AI, bukan materi instruksional
+  teknik bola voli. Tahapan teknik dan video demonstrasi perlu diverifikasi.
+- Menu pilihan materi, latihan, kuis, dan refleksi masih placeholder sesuai roadmap.
+- Jangan mengganti file src/index.css dengan versi bawaan Vite.
+- Jika ikon Volleyball tidak tersedia di versi lucide-react kamu, jalankan
+  npm install lucide-react@latest atau ubah ikon menjadi Activity.

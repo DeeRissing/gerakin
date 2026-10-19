@@ -1,12 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
-
-import {
-  Activity,
-  Menu,
-  X,
-  ArrowRight,
-} from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
+import logoGerakin from "../assets/logo-gerakin.svg";
 
 const navigation = [
   { name: "Beranda", path: "/" },
@@ -18,6 +13,7 @@ const navigation = [
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+
   const navStyle = ({ isActive }) =>
     `rounded-xl px-4 py-3 text-sm font-semibold transition-colors ${
       isActive
@@ -27,19 +23,17 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-sky-100 bg-white/95 backdrop-blur-xl">
-
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-5 lg:px-10">
-
-        {/* LOGO GERAKIN */}
-
         <NavLink
           to="/"
           className="flex shrink-0 items-center gap-3"
           aria-label="GERAKIN - Beranda"
         >
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-linear-to-br from-sky-400 to-blue-600 text-white shadow-md shadow-sky-100">
-            <Activity size={25} strokeWidth={2.8} />
-          </div>
+          <img
+            src={logoGerakin}
+            alt="Logo GERAKIN"
+            className="h-12 w-12 object-contain sm:h-14 sm:w-14"
+          />
 
           <div>
             <h1 className="text-2xl font-black tracking-tight text-gerakin-navy">
@@ -47,17 +41,12 @@ export default function Navbar() {
             </h1>
 
             <p className="hidden text-[10px] font-semibold tracking-wide text-slate-400 sm:block">
-              GERAK AKTIF, INTERAKTIF, INOVATIF
+              GERAK AKTIF, INTERAKTIF, DAN INOVATIF
             </p>
           </div>
         </NavLink>
 
-        {/* NAVIGASI DESKTOP */}
-
-        <nav
-          className="hidden items-center gap-1 lg:flex"
-          aria-label="Navigasi utama"
-        >
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Navigasi utama">
           {navigation.map((item) => (
             <NavLink
               key={item.path}
@@ -70,8 +59,6 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* TOMBOL DESKTOP */}
-
         <NavLink
           to="/materi"
           className="hidden items-center gap-2 rounded-full bg-gerakin-yellow px-5 py-3 text-sm font-bold text-gerakin-navy transition hover:bg-yellow-300 lg:flex"
@@ -79,8 +66,6 @@ export default function Navbar() {
           Mulai Belajar
           <ArrowRight size={17} />
         </NavLink>
-
-        {/* MENU MOBILE */}
 
         <button
           type="button"
@@ -92,10 +77,7 @@ export default function Navbar() {
         >
           {mobileOpen ? <X size={25} /> : <Menu size={25} />}
         </button>
-
       </div>
-
-      {/* NAVIGASI MOBILE */}
 
       {mobileOpen && (
         <nav
@@ -104,7 +86,6 @@ export default function Navbar() {
           aria-label="Navigasi seluler"
         >
           <div className="flex flex-col gap-1">
-
             {navigation.map((item) => (
               <NavLink
                 key={item.path}
@@ -116,7 +97,6 @@ export default function Navbar() {
                 {item.name}
               </NavLink>
             ))}
-
           </div>
 
           <NavLink
@@ -129,7 +109,6 @@ export default function Navbar() {
           </NavLink>
         </nav>
       )}
-
     </header>
   );
 }

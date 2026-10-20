@@ -14,10 +14,8 @@ import ActionLink from "./components/ActionLink";
 import FeatureCard from "./components/FeatureCard";
 import SectionHeading from "./components/SectionHeading";
 import heroImage from "./assets/volleyball.svg";
-import {
-  MateriPage,
-  DetailMateriSementara,
-} from "./Pages/Materi";
+import { MateriPage } from "./Pages/Materi";
+import DetailMateriPage from "./Pages/DetailMateri";
 
 function Beranda() {
   return (
@@ -223,7 +221,7 @@ export default function App() {
 
 <Route
   path="/materi/:slug"
-  element={<DetailMateriSementara />}
+  element={<DetailMateriPage />}
 />
 
         <Route

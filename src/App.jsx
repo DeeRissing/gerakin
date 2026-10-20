@@ -9,6 +9,10 @@ import {
   Smartphone,
 } from "lucide-react";
 
+import {
+  LatihanPage,
+  LatihanDetailPage,
+} from "./Pages/Latihan";
 import Navbar from "./components/Navbar";
 import ActionLink from "./components/ActionLink";
 import FeatureCard from "./components/FeatureCard";
@@ -16,6 +20,16 @@ import SectionHeading from "./components/SectionHeading";
 import heroImage from "./assets/volleyball.svg";
 import { MateriPage } from "./Pages/Materi";
 import DetailMateriPage from "./Pages/DetailMateri";
+
+import {
+  KuisPage,
+  KuisDetailPage,
+} from "./Pages/Kuis";
+import {
+  RefleksiPage,
+  RefleksiDetailPage,
+} from "./Pages/Refleksi";
+
 
 function Beranda() {
   return (
@@ -224,35 +238,37 @@ export default function App() {
   element={<DetailMateriPage />}
 />
 
-        <Route
-          path="/latihan"
-          element={
-            <HalamanSementara
-              judul="Latihan Praktik"
-              deskripsi="Tantangan praktik bola voli akan tersedia di sini."
-            />
-          }
-        />
+<Route
+  path="/latihan"
+  element={<LatihanPage />}
+/>
 
-        <Route
-          path="/kuis"
-          element={
-            <HalamanSementara
-              judul="Kuis Interaktif"
-              deskripsi="Uji pemahamanmu tentang permainan bola voli."
-            />
-          }
-        />
+<Route
+  path="/latihan/:slug"
+  element={<LatihanDetailPage />}
+/>
 
-        <Route
-          path="/refleksi"
-          element={
-            <HalamanSementara
-              judul="Refleksi Pembelajaran"
-              deskripsi="Evaluasi perkembangan dan pengalaman belajarmu."
-            />
-          }
-        />
+
+<Route
+  path="/kuis"
+  element={<KuisPage />}
+/>
+
+<Route
+  path="/kuis/:slug"
+  element={<KuisDetailPage />}
+/>
+
+
+<Route
+  path="/refleksi"
+  element={<RefleksiPage />}
+/>
+
+<Route
+  path="/refleksi/:slug"
+  element={<RefleksiDetailPage />}
+/>
 
         <Route
           path="*"

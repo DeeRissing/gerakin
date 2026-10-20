@@ -76,18 +76,22 @@ export default function DetailMateriPage() {
       {/* HEADER MATERI */}
       <section className="overflow-hidden bg-linear-to-br from-sky-100 via-white to-blue-100">
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-12 lg:grid-cols-2 lg:px-10 lg:py-16">
-          <div>
-            <Link
-              to="/materi"
-              className="inline-flex items-center gap-2 text-sm font-bold text-sky-700 hover:underline"
-            >
-              <ArrowLeft size={17} />
-              Kembali ke Pilihan Materi
-            </Link>
 
-            <div className="mt-8 inline-flex rounded-full bg-sky-200 px-4 py-2 text-xs font-black uppercase tracking-wider text-sky-800">
-              Materi {String(materi.id).padStart(2, "0")}
-            </div>
+<div>
+  <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+    <Link
+      to="/materi"
+      className="inline-flex items-center gap-2 text-sm font-bold text-sky-700 hover:underline"
+    >
+      <ArrowLeft size={17} />
+      Kembali ke Pilihan Materi
+    </Link>
+
+    <span className="inline-flex shrink-0 items-center rounded-full bg-sky-200 px-4 py-2 text-xs font-black uppercase tracking-wider text-sky-800">
+      Materi {String(materi.id).padStart(2, "0")}
+    </span>
+  </div>
+
 
             <h1 className="mt-5 text-4xl font-black tracking-tight text-gerakin-navy sm:text-5xl lg:text-6xl">
               {materi.title}
@@ -352,16 +356,16 @@ export default function DetailMateriPage() {
 
           {/* NAVIGASI BAWAH */}
           <div className="flex flex-wrap items-center justify-between gap-4 rounded-3xl bg-sky-100 p-6">
-            <Link
-              to="/materi"
-              className="inline-flex min-h-12 items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-sky-800"
-            >
-              <ArrowLeft size={18} />
-              Daftar Materi
-            </Link>
+<Link
+  to="/materi"
+  className="inline-flex items-center gap-2 text-sm font-bold text-sky-700 hover:underline"
+>
+  <ArrowLeft size={17} />
+  Kembali ke Pilihan Materi
+</Link>
 
             <Link
-              to="/latihan"
+              to={`/latihan/${slug}`}
               className="inline-flex min-h-12 items-center gap-2 rounded-full bg-gerakin-yellow px-6 py-3 text-sm font-bold text-gerakin-navy"
             >
               Menu Latihan

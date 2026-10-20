@@ -1,0 +1,52 @@
+/* GERAKIN Visual Refinement v0.9
+   1. Jarak baris kembali + badge detail materi
+   2. Pan perlahan pada GAMBAR Hero, bukan pada kontainer wave/SVG
+   3. Ornamen navbar hanya di background, tanpa menangkap interaksi
+*/
+.gerakin-detail-topline {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: clamp(1rem, 2vw, 1.75rem);
+  row-gap: 0.75rem;
+}
+
+.gerakin-detail-topline > * {
+  max-width: 100%;
+}
+
+/* Terapkan kelas ini pada <img> Hero saja. Pastikan parent-nya overflow:hidden. */
+.gerakin-hero-motion {
+  transform-origin: center;
+  animation: gerakin-hero-pan 10s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes gerakin-hero-pan {
+  from { transform: scale(1.12) translate3d(-2%, 0, 0); }
+  to   { transform: scale(1.12) translate3d(2%, 0, 0); }
+}
+
+/* Kurangi pergeseran di HP agar fokus visual tetap berada dalam bidang crop. */
+@media (max-width: 639px) {
+  .gerakin-hero-motion { animation-duration: 12s; }
+  @keyframes gerakin-hero-pan {
+    from { transform: scale(1.12) translate3d(-1.25%, 0, 0); }
+    to   { transform: scale(1.12) translate3d(1.25%, 0, 0); }
+  }
+}
+
+/* Jangan memaksa animasi untuk pengguna yang meminta gerakan diminimalkan. */
+@media (prefers-reduced-motion: reduce) {
+  .gerakin-hero-motion {
+    animation: none;
+    transform: none;
+    will-change: auto;
+  }
+}
+
+/* Ornamen navbar tidak mempengaruhi navigasi ataupun affordance tombol. */
+.gerakin-navbar-accents {
+  user-select: none;
+  pointer-events: none;
+}

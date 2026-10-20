@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router";
 import { Menu, X, ArrowRight } from "lucide-react";
 import logoGerakin from "../assets/logo-gerakin.svg";
+import NavbarVolleyballAccents from "./NavbarVolleyballAccents";
 
 const navigation = [
   { name: "Beranda", path: "/" },
@@ -28,7 +29,7 @@ export default function Navbar() {
           to="/"
           className="flex shrink-0 items-center gap-3"
           aria-label="GERAKIN - Beranda"
-        >
+        ><NavbarVolleyballAccents />
           <img
             src={logoGerakin}
             alt="Logo GERAKIN"

@@ -14,6 +14,10 @@ import ActionLink from "./components/ActionLink";
 import FeatureCard from "./components/FeatureCard";
 import SectionHeading from "./components/SectionHeading";
 import heroImage from "./assets/volleyball.svg";
+import {
+  MateriPage,
+  DetailMateriSementara,
+} from "./Pages/Materi";
 
 function Beranda() {
   return (
@@ -212,15 +216,15 @@ export default function App() {
           element={<Beranda />}
         />
 
-        <Route
-          path="/materi"
-          element={
-            <HalamanSementara
-              judul="Pilihan Materi"
-              deskripsi="Enam teknik dasar bola voli akan tersedia di halaman ini."
-            />
-          }
-        />
+<Route
+  path="/materi"
+  element={<MateriPage />}
+/>
+
+<Route
+  path="/materi/:slug"
+  element={<DetailMateriSementara />}
+/>
 
         <Route
           path="/latihan"

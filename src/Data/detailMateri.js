@@ -73,7 +73,7 @@ export const detailMateri = {
       "Mulailah dengan operan sederhana sebelum meningkatkan kesulitan.",
     ],
 
-    videoUrl: "/public/videos/passing-bawah.mp4",
+    videoUrl: "/videos/passing-bawah.mp4",
   },
   
   // ==========================================
@@ -97,28 +97,28 @@ export const detailMateri = {
         judul: "Posisi Awal",
         deskripsi:
           "Berdirilah dengan kaki terbuka selebar bahu dan lutut sedikit ditekuk. Posisikan tubuh di bawah arah datangnya bola serta arahkan pandangan ke bola.",
-        image: "/public/images/passing atas/tahap-1.png",
+        image: "/images/passing atas/tahap-1.png",
       },
       {
         nomor: 2,
         judul: "Posisi Tangan",
         deskripsi:
           "Angkat kedua tangan ke atas depan dahi. Buka dan lengkungkan jari-jari secara alami sehingga kedua tangan membentuk bidang penerimaan bola.",
-        image: "/public/images/passing atas/tahap-2.png",
+        image: "/images/passing atas/tahap-2.png",
       },
       {
         nomor: 3,
         judul: "Kontak dengan Bola",
         deskripsi:
           "Sentuh bola menggunakan bantalan jari-jari tangan. Tekuk siku secukupnya untuk menyerap datangnya bola dan hindari kontak menggunakan telapak tangan.",
-        image: "/public/images/passing atas/tahap-3.png",
+        image: "/images/passing atas/tahap-3.png",
       },
       {
         nomor: 4,
         judul: "Dorong dan Arahkan Bola",
         deskripsi:
           "Luruskan lutut dan kedua lengan secara terkoordinasi untuk mengarahkan bola ke sasaran. Akhiri gerakan dengan tangan mengikuti arah operan.",
-        image: "/public/images/passing atas/tahap-4.png",
+        image: "/images/passing atas/tahap-4.png",
       },
     ],
 
@@ -153,7 +153,7 @@ export const detailMateri = {
       "Latih akurasi operan kepada teman secara bertahap.",
     ],
 
-    videoUrl: "/public/videos/passing-atas.mp4",
+    videoUrl: "/videos/passing-atas.mp4",
   },
 
   // ==========================================
@@ -177,28 +177,28 @@ export const detailMateri = {
         judul: "Sikap Awal",
         deskripsi:
           "Berdirilah di belakang garis akhir lapangan. Jika memukul dengan tangan kanan, tempatkan kaki kiri sedikit di depan. Pegang bola menggunakan tangan kiri.",
-        image: "/public/images/servis bawah/tahap-1.png",
+        image: "/images/servis bawah/tahap-1.png",
       },
       {
         nomor: 2,
         judul: "Persiapan Pukulan",
         deskripsi:
           "Posisikan bola di depan badan sekitar ketinggian pinggang. Ayunkan tangan pemukul ke belakang dan siapkan perpindahan berat badan ke depan.",
-        image: "/public/images/servis bawah/tahap-2.png",
+        image: "/images/servis bawah/tahap-2.png",
       },
       {
         nomor: 3,
         judul: "Memukul Bola",
         deskripsi:
           "Ayunkan tangan pemukul dari belakang ke depan. Lepaskan bola sedikit dari tangan penyangga, lalu pukul bagian bawah belakang bola menggunakan pangkal telapak tangan atau kepalan tangan yang stabil.",
-        image: "/public/images/servis bawah/tahap-3.png",
+        image: "/images/servis bawah/tahap-3.png",
       },
       {
         nomor: 4,
         judul: "Gerakan Lanjutan",
         deskripsi:
           "Lanjutkan gerakan tangan ke arah sasaran sambil memindahkan berat badan ke kaki depan. Perhatikan arah bola agar melewati net dan masuk ke lapangan lawan.",
-        image: "/public/images/servis bawah/tahap-4.png",
+        image: "/images/servis bawah/tahap-4.png",
       },
     ],
 
@@ -233,7 +233,7 @@ export const detailMateri = {
       "Pastikan posisi kaki tetap seimbang ketika melakukan servis.",
     ],
 
-    videoUrl: "/public/videos/servis-bawah.mp4",
+    videoUrl: "/videos/servis-bawah.mp4",
   },
 
   // ==========================================
@@ -257,28 +257,28 @@ export const detailMateri = {
         judul: "Posisi Persiapan",
         deskripsi:
           "Berdirilah di belakang garis akhir. Jika menggunakan tangan kanan untuk memukul, tempatkan kaki kiri sedikit di depan dan pegang bola menggunakan tangan kiri.",
-        image: "/public/images/servis atas/tahap-1.png",
+        image: "/images/servis atas/tahap-1.png",
       },
       {
         nomor: 2,
         judul: "Melambungkan Bola",
         deskripsi:
           "Lambungkan bola secara terkendali ke atas dan sedikit di depan bahu tangan pemukul. Pastikan lambungan cukup tinggi agar bola dapat dipukul dengan nyaman.",
-        image: " /public/images/servis atas/tahap-2.png",
+        image: "/images/servis atas/tahap-2.png",
       },
       {
         nomor: 3,
         judul: "Memukul Bola",
         deskripsi:
           "Tarik siku tangan pemukul ke belakang atas, kemudian ayunkan lengan ke depan. Pukul bagian belakang bola menggunakan telapak tangan yang terbuka dan kuat saat bola berada pada jangkauan yang tepat.",
-        image: "/public/images/servis atas/tahap-3.png",
+        image: "/images/servis atas/tahap-3.png",
       },
       {
         nomor: 4,
         judul: "Gerakan Lanjutan",
         deskripsi:
           "Ikuti arah pukulan dengan gerakan lengan dan perpindahan berat badan ke depan. Pertahankan keseimbangan dan perhatikan arah bola menuju lapangan lawan.",
-        image: "/public/images/servis atas/tahap-4.png",
+        image: "/images/servis atas/tahap-4.png",
       },
     ],
 
@@ -313,7 +313,7 @@ export const detailMateri = {
       "Mulai dengan servis atas tanpa lompatan untuk menguasai teknik dasar.",
     ],
 
-    videoUrl: "/public/videos/servis-atas.mp4x",
+    videoUrl: "/videos/servis-atas.mp4",
   },
 
   // ==========================================
@@ -337,28 +337,28 @@ export const detailMateri = {
         judul: "Awalan",
         deskripsi:
           "Perhatikan umpan dari rekan satu tim. Lakukan beberapa langkah awalan dengan irama yang terkontrol menuju titik lompatan agar posisi tubuh sesuai dengan arah datangnya bola.",
-        image: "/public/images/smash/tahap 1.png",
+        image: "/images/smash/tahap 1.png",
       },
       {
         nomor: 2,
         judul: "Tolakan dan Lompatan",
         deskripsi:
           "Tekuk lutut dan ayunkan kedua lengan untuk membantu tolakan. Lakukan lompatan dengan kedua kaki sambil menjaga tubuh tetap seimbang dan memperhatikan posisi bola.",
-        image: "/public/images/smash/tahap 2.png",
+        image: "/images/smash/tahap 2.png",
       },
       {
         nomor: 3,
         judul: "Memukul Bola",
         deskripsi:
           "Tarik tangan pemukul ke belakang atas. Ayunkan lengan dan pukul bagian atas belakang bola dengan telapak tangan terbuka pada titik jangkauan yang tepat, lalu arahkan bola ke lapangan lawan.",
-        image: "/public/images/smash/tahap 3.png",
+        image: "/images/smash/tahap 3.png",
       },
       {
         nomor: 4,
         judul: "Pendaratan",
         deskripsi:
           "Setelah melakukan pukulan, mendaratlah dengan kedua kaki dan lutut sedikit ditekuk untuk meredam benturan. Pertahankan keseimbangan dan hindari menyentuh net.",
-        image: "/public/images/smash/tahap 4.png",
+        image: "/images/smash/tahap 4.png",
       },
     ],
 
@@ -393,7 +393,7 @@ export const detailMateri = {
       "Latih pendaratan yang aman untuk mengurangi risiko cedera.",
     ],
 
-    videoUrl: "/public/videos/smash.mp4",
+    videoUrl: "/videos/smash.mp4",
   },
 
   // ==========================================
@@ -417,28 +417,28 @@ export const detailMateri = {
         judul: "Posisi Siap",
         deskripsi:
           "Berdirilah dekat net dengan kedua kaki terbuka selebar bahu. Tekuk sedikit lutut, angkat kedua tangan di depan dada, dan perhatikan pemain penyerang lawan.",
-        image: "/public/images/blok/tahap-1.png",
+        image: "/images/blok/tahap-1.png",
       },
       {
         nomor: 2,
         judul: "Membaca Arah Serangan",
         deskripsi:
           "Perhatikan arah umpan dan gerakan penyerang lawan. Bergeraklah menyamping menuju perkiraan jalur serangan sambil menjaga keseimbangan tubuh.",
-        image: "/public/images/blok/tahap-2.png",
+        image: "/images/blok/tahap-2.png",
       },
       {
         nomor: 3,
         judul: "Melompat dan Membendung",
         deskripsi:
           "Lakukan lompatan vertikal pada waktu yang tepat. Angkat kedua tangan lurus ke atas dengan jari-jari terbuka dan rapatkan jarak antartangan untuk membentuk bidang bendungan yang efektif.",
-        image: "/public/images/blok/tahap-3.png",
+        image: "/images/blok/tahap-3.png",
       },
       {
         nomor: 4,
         judul: "Pendaratan dan Persiapan",
         deskripsi:
           "Mendaratlah dengan kedua kaki dan lutut sedikit ditekuk. Hindari menyentuh net dan segera bersiap menghadapi kemungkinan bola kembali dimainkan.",
-        image: "/public/images/blok/tahap-4.png",
+        image: "/images/blok/tahap-4.png",
       },
     ],
 
@@ -473,7 +473,7 @@ export const detailMateri = {
       "Latih komunikasi ketika melakukan blok bersama rekan satu tim.",
     ],
 
-    videoUrl: "/public/videos/blok.mp4",
+    videoUrl: "/videos/blok.mp4",
   },
 
 };
